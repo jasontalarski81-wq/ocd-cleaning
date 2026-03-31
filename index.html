@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCD Cleaning Solutions | Professional Cleaning in St. Louis</title>
+<meta name="description" content="OCD Cleaning Solutions - Professional residential and commercial cleaning services in O'Fallon, MO and the Greater St. Louis Area. Call 636-795-3311 for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: #fff; color: #111; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 0 32px; height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+}
+.nav-logo img {
+  width: 48px; height: 48px; object-fit: contain;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 6px;
+}
+.nav-link {
+  padding: 8px 14px; font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  color: #333; cursor: pointer; transition: color 0.2s;
+  border-radius: 4px;
+}
+.nav-link:hover, .nav-link.active { color: #e0157a; }
+.nav-phone-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #e0157a; color: #fff;
+  padding: 12px 20px; border-radius: 6px;
+  font-weight: 800; font-size: 14px; letter-spacing: 0.3px;
+  transition: background 0.2s; white-space: nowrap;
+}
+.nav-phone-btn:hover { background: #c01068; }
+.nav-phone-btn svg { width: 15px; height: 15px; fill: #fff; }
+.hamburger { display: none; font-size: 26px; cursor: pointer; color: #e0157a; }
+.mobile-menu {
+  display: none; flex-direction: column; position: absolute;
+  top: 72px; left: 0; right: 0; background: #fff;
+  padding: 12px 20px 20px; border-bottom: 2px solid #e0157a;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 99;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu .nav-link { padding: 14px 0; border-bottom: 1px solid #f0f0f0; border-radius: 0; }
+
+/* PAGE SECTIONS */
+.page { display: none; }
+.page.active { display: block; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.15) 100%),
+    url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex; align-items: center;
+  padding: 100px 60px 60px;
+}
+.hero-content {
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: clamp(36px, 5.5vw, 68px);
+  font-weight: 900; line-height: 1.05;
+  color: #fff; margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+.hero h1 .pink { color: #f01a80; }
+.hero-sub {
+  color: rgba(255,255,255,0.88); font-size: clamp(14px, 1.8vw, 17px);
+  line-height: 1.6; margin-bottom: 34px; font-weight: 500; max-width: 520px;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-block; padding: 15px 32px;
+  background: #e0157a; color: #fff;
+  font-weight: 800; font-size: 15px; border-radius: 6px;
+  text-transform: uppercase; letter-spacing: 1px;
+  transition: all 0.2s; cursor: pointer; border: none;
+}
+.btn-primary:hover { background: #c01068; transform: translateY(-2px); }
+.btn-outline {
+  display: inline-block; padding: 15px 32px;
+  background: transparent; color: #fff;
+  font-weight: 800; font-size: 15px; border-radius: 6px;
+  text-transform: uppercase; letter-spacing: 1px;
+  border: 2px solid rgba(255,255,255,0.7);
+  transition: all 0.2s; cursor: pointer;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+
+/* INNER PAGE WRAPPER */
+.inner-page { padding-top: 72px; }
+.section { padding: 80px 40px; }
+.section-title { font-size: 36px; font-weight: 900; margin-bottom: 12px; }
+.section-title .pink { color: #e0157a; }
+.section-sub { color: #666; font-size: 16px; margin-bottom: 50px; }
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px; max-width: 1100px; margin: 0 auto;
+}
+.service-card {
+  background: #fafafa; border: 1px solid #eee; border-radius: 14px;
+  padding: 30px; transition: all 0.3s; position: relative; overflow: hidden;
+}
+.service-card:hover {
+  border-color: #e0157a; transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(224,21,122,0.12);
+}
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #e0157a, #ff6ab5);
+  transform: scaleX(0); transition: transform 0.3s; transform-origin: left;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon { font-size: 40px; margin-bottom: 14px; }
+.service-card h3 { font-size: 19px; font-weight: 800; margin-bottom: 8px; }
+.service-card p { color: #666; font-size: 14px; line-height: 1.6; }
+.service-price {
+  display: inline-block; margin-top: 14px;
+  color: #e0157a; font-weight: 700; font-size: 14px;
+  background: rgba(224,21,122,0.08); padding: 4px 12px; border-radius: 20px;
+}
+.popular-tag {
+  position: absolute; top: 14px; right: 14px;
+  background: #e0157a; color: #fff; font-size: 10px;
+  font-weight: 800; padding: 4px 10px; border-radius: 20px;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+
+/* RESIDENTIAL / COMMERCIAL */
+.split-section {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  max-width: 1100px; margin: 0 auto; align-items: center;
+}
+.split-section.reverse { direction: rtl; }
+.split-section.reverse > * { direction: ltr; }
+.split-img {
+  width: 100%; border-radius: 16px; object-fit: cover; height: 380px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+.split-content h2 { font-size: 30px; font-weight: 900; margin-bottom: 14px; }
+.split-content h2 .pink { color: #e0157a; }
+.split-content p { color: #555; line-height: 1.7; margin-bottom: 20px; font-size: 15px; }
+.checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.checklist li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: #333; }
+.checklist li::before { content: '✓'; color: #e0157a; font-weight: 900; font-size: 16px; }
+
+/* ABOUT */
+.about-wrap { max-width: 800px; margin: 0 auto; text-align: center; }
+.about-wrap p { color: #555; font-size: 16px; line-height: 1.8; margin-bottom: 20px; }
+.about-stats {
+  display: flex; justify-content: center; gap: 60px; margin-top: 50px; flex-wrap: wrap;
+}
+.about-stat .num { font-size: 42px; font-weight: 900; color: #e0157a; }
+.about-stat .label { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; font-weight: 600; }
+
+/* CONTACT */
+.contact-wrap { max-width: 700px; margin: 0 auto; }
+.contact-info-row {
+  display: flex; align-items: center; gap: 16px;
+  background: #fafafa; border: 1px solid #eee; border-radius: 12px;
+  padding: 18px 22px; margin-bottom: 14px; transition: all 0.2s; cursor: default;
+}
+.contact-info-row:hover { border-color: #e0157a; }
+.contact-info-row .icon { font-size: 26px; }
+.contact-info-row .info h4 { font-size: 12px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 1px; }
+.contact-info-row .info p { font-size: 17px; font-weight: 600; color: #111; margin-top: 2px; }
+.contact-info-row .info a { color: #111; }
+.contact-info-row .info a:hover { color: #e0157a; }
+.contact-form { display: flex; flex-direction: column; gap: 14px; margin-top: 34px; }
+.contact-form input, .contact-form textarea, .contact-form select {
+  background: #fafafa; border: 1px solid #ddd; border-radius: 10px;
+  padding: 15px 18px; font-family: 'Montserrat', sans-serif;
+  font-size: 14px; color: #111; outline: none; transition: border 0.2s;
+}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+  border-color: #e0157a; box-shadow: 0 0 0 3px rgba(224,21,122,0.08);
+}
+.contact-form textarea { min-height: 110px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.success-msg {
+  display: none; text-align: center; padding: 40px;
+}
+.success-msg.show { display: block; }
+.success-msg h3 { font-size: 22px; font-weight: 800; color: #e0157a; margin: 12px 0 6px; }
+.success-msg p { color: #666; }
+
+/* CTA STRIP */
+.cta-strip {
+  background: #e0157a; padding: 60px 40px; text-align: center;
+}
+.cta-strip h2 { color: #fff; font-size: 30px; font-weight: 900; margin-bottom: 10px; }
+.cta-strip p { color: rgba(255,255,255,0.85); margin-bottom: 28px; font-size: 16px; }
+.btn-white {
+  display: inline-block; padding: 16px 40px;
+  background: #fff; color: #e0157a;
+  font-weight: 900; font-size: 16px; border-radius: 6px;
+  text-transform: uppercase; letter-spacing: 1px;
+  transition: all 0.2s;
+}
+.btn-white:hover { background: #f7f7f7; transform: translateY(-2px); }
+
+/* FOOTER */
+footer {
+  background: #111; color: #888; text-align: center;
+  padding: 28px 24px; font-size: 13px;
+}
+footer span { color: #e0157a; }
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .split-section { grid-template-columns: 1fr; gap: 30px; }
+  .split-section.reverse { direction: ltr; }
+  .split-img { height: 260px; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .hero { padding: 90px 24px 50px; }
+  .section { padding: 60px 20px; }
+  .about-stats { gap: 30px; }
+  .form-row { grid-template-columns: 1fr; }
+  nav { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="logo.jpg" alt="OCD Cleaning Solutions">
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links">
+    <div class="nav-link active" onclick="showPage('home')">Home</div>
+    <div class="nav-link" onclick="showPage('residential')">Residential</div>
+    <div class="nav-link" onclick="showPage('commercial')">Commercial</div>
+    <div class="nav-link" onclick="showPage('about')">About</div>
+    <div class="nav-link" onclick="showPage('contact')">Contact</div>
+  </div>
+  <a class="nav-phone-btn" href="tel:6367953311">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.5 11.5 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.5 11.5 0 00.57 3.6 1 1 0 01-.25 1.01l-2.2 2.18z"/></svg>
+    636-795-3311
+  </a>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="nav-link active" onclick="showPage('home')">Home</div>
+  <div class="nav-link" onclick="showPage('residential')">Residential</div>
+  <div class="nav-link" onclick="showPage('commercial')">Commercial</div>
+  <div class="nav-link" onclick="showPage('about')">About</div>
+  <div class="nav-link" onclick="showPage('contact')">Contact</div>
+</div>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Professional Cleaning<br><span class="pink">Done Right</span></h1>
+      <p class="hero-sub">Obsessively Clean. Distinctly Different. Serving the Greater St. Louis Area.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" onclick="showPage('contact')">Get a Free Quote</a>
+        <a class="btn-outline" href="tel:6367953311">Call 636-795-3311</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES PREVIEW -->
+  <div class="section" style="background:#fff; text-align:center;">
+    <h2 class="section-title">Our <span class="pink">Services</span></h2>
+    <p class="section-sub">Professional cleaning you can trust — every single time</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="popular-tag">Most Popular</span>
+        <div class="service-icon">🏠</div>
+        <h3>Residential Cleaning</h3>
+        <p>Regular house cleaning, deep cleaning, and maintenance. We treat your home like it's our own.</p>
+        <div class="service-price">Starting at $120</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Commercial Cleaning</h3>
+        <p>Office buildings, retail spaces, and commercial properties. First impressions matter.</p>
+        <div class="service-price">Custom Quote</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Deep Cleaning</h3>
+        <p>Top-to-bottom intensive cleaning. Baseboards, blinds, inside appliances — the works.</p>
+        <div class="service-price">Starting at $200</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Move-In / Move-Out</h3>
+        <p>Make your old place sparkle or walk into a fresh new home. Perfect for landlords and realtors.</p>
+        <div class="service-price">Starting at $175</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪟</div>
+        <h3>Window Cleaning</h3>
+        <p>Crystal-clear windows inside and out. No streaks, no spots — just pure clean glass.</p>
+        <div class="service-price">Starting at $75</div>
+      </div>
+      <div class="service-card">
+        <span class="popular-tag">Best Value</span>
+        <div class="service-icon">🔄</div>
+        <h3>Recurring Service</h3>
+        <p>Weekly, bi-weekly, or monthly plans. Set it and forget it — your space stays consistently spotless.</p>
+        <div class="service-price">Save 15% recurring</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <h2>Ready for a Spotless Space?</h2>
+    <p>We respond to every inquiry within 24 hours. Same-day quotes available.</p>
+    <a class="btn-white" onclick="showPage('contact')">Get a Free Quote</a>
+  </div>
+</div>
+
+<!-- RESIDENTIAL -->
+<div id="page-residential" class="page">
+  <div class="inner-page">
+    <div class="section">
+      <div class="split-section">
+        <img class="split-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Residential cleaning">
+        <div class="split-content">
+          <h2>Residential <span class="pink">Cleaning</span></h2>
+          <p>Your home is your sanctuary. We keep it spotless so you can focus on what matters — without lifting a finger.</p>
+          <p>From weekly maintenance to one-time deep cleans, our team delivers consistent, thorough results every visit.</p>
+          <ul class="checklist">
+            <li>Kitchen & bathrooms deep-cleaned</li>
+            <li>Dusting, vacuuming & mopping</li>
+            <li>Baseboards, ceiling fans & light fixtures</li>
+            <li>Inside appliances on request</li>
+            <li>Flexible scheduling — weekly, bi-weekly, monthly</li>
+            <li>100% satisfaction guaranteed</li>
+          </ul>
+          <a class="btn-primary" onclick="showPage('contact')">Book a Cleaning</a>
+        </div>
+      </div>
+    </div>
+    <div class="cta-strip">
+      <h2>Your Home Deserves the Best</h2>
+      <p>Starting at $120. Free quotes available same day.</p>
+      <a class="btn-white" href="tel:6367953311">Call 636-795-3311</a>
+    </div>
+  </div>
+</div>
+
+<!-- COMMERCIAL -->
+<div id="page-commercial" class="page">
+  <div class="inner-page">
+    <div class="section">
+      <div class="split-section reverse">
+        <img class="split-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial cleaning">
+        <div class="split-content">
+          <h2>Commercial <span class="pink">Cleaning</span></h2>
+          <p>A clean workplace is a productive workplace. We keep your business spotless so you can focus on running it.</p>
+          <p>Flexible scheduling — early morning, evenings, weekends — whatever works for your operation.</p>
+          <ul class="checklist">
+            <li>Office buildings & suites</li>
+            <li>Retail spaces & showrooms</li>
+            <li>Restroom sanitation & restocking</li>
+            <li>Break rooms & common areas</li>
+            <li>Floor care — vacuuming & mopping</li>
+            <li>Custom cleaning plans available</li>
+          </ul>
+          <a class="btn-primary" onclick="showPage('contact')">Get a Custom Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="cta-strip">
+      <h2>Keep Your Business Looking Sharp</h2>
+      <p>Custom quotes for any size space. Call or message us today.</p>
+      <a class="btn-white" href="tel:6367953311">Call 636-795-3311</a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="page-about" class="page">
+  <div class="inner-page">
+    <div class="section" style="text-align:center;">
+      <div class="about-wrap">
+        <h2 class="section-title">About <span class="pink">OCD Cleaning</span></h2>
+        <p style="margin-bottom:0" class="section-sub">Obsessively Clean. Distinctly Different.</p>
+        <br>
+        <p>OCD Cleaning Solutions was founded on one simple belief: cleaning done right makes a real difference in people's lives. We're not your average cleaning company — we're obsessively thorough, detail-oriented, and genuinely care about every space we touch.</p>
+        <p>Based in O'Fallon, MO, we serve residential and commercial clients across the Greater St. Louis Area. Whether it's your home, your office, or a move-out deep clean, we show up on time, equipped, and ready to deliver results you can see and feel.</p>
+        <p>We're fully insured, background-checked, and committed to your satisfaction on every visit — guaranteed.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="num">5★</div>
+            <div class="label">Google Rated</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">100%</div>
+            <div class="label">Satisfaction</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">Same Day</div>
+            <div class="label">Quotes</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">Insured</div>
+            <div class="label">& Background Checked</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-strip">
+      <h2>Ready to Experience the Difference?</h2>
+      <p>Call us today for a free quote — same-day response guaranteed.</p>
+      <a class="btn-white" onclick="showPage('contact')">Get a Free Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="page-contact" class="page">
+  <div class="inner-page">
+    <div class="section">
+      <div class="contact-wrap">
+        <h2 class="section-title">Get In <span class="pink">Touch</span></h2>
+        <p class="section-sub">Ready for a spotless space? We respond within 24 hours.</p>
+
+        <div class="contact-info-row" onclick="window.location.href='tel:6367953311'" style="cursor:pointer;">
+          <div class="icon">📞</div>
+          <div class="info">
+            <h4>Call or Text</h4>
+            <p><a href="tel:6367953311">636-795-3311</a></p>
+          </div>
+        </div>
+        <div class="contact-info-row">
+          <div class="icon">📍</div>
+          <div class="info">
+            <h4>Address</h4>
+            <p>1029 Central Pkwy, O'Fallon, MO 63366</p>
+          </div>
+        </div>
+        <div class="contact-info-row">
+          <div class="icon">⏰</div>
+          <div class="info">
+            <h4>Hours</h4>
+            <p>Mon – Sat · 8AM – 6PM</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="quoteForm" onsubmit="submitForm(event)">
+          <h3 style="font-size:20px; font-weight:800; margin-bottom:4px;">Request a <span style="color:#e0157a">Free Quote</span></h3>
+          <div class="form-row">
+            <input type="text" placeholder="Your Name *" required>
+            <input type="tel" placeholder="Phone Number *" required>
+          </div>
+          <input type="email" placeholder="Email Address">
+          <select required>
+            <option value="" disabled selected>Service Needed *</option>
+            <option>Residential Cleaning</option>
+            <option>Commercial Cleaning</option>
+            <option>Deep Cleaning</option>
+            <option>Move-In / Move-Out</option>
+            <option>Window Cleaning</option>
+            <option>Recurring Service</option>
+            <option>Not Sure — Help Me Decide</option>
+          </select>
+          <textarea placeholder="Tell us about your space — size, rooms, anything special..."></textarea>
+          <button type="submit" class="btn-primary" style="width:100%; padding:18px; font-size:16px; border-radius:10px;">Send Request →</button>
+        </form>
+
+        <div class="success-msg" id="successMsg">
+          <div style="font-size:52px;">✅</div>
+          <h3>Request Sent!</h3>
+          <p>We'll get back to you within 24 hours. Talk soon!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 <span>OCD Cleaning Solutions</span> · O'Fallon, MO · All Rights Reserved
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-link, .mobile-menu .nav-link').forEach(l => {
+    if (l.getAttribute('onclick') && l.getAttribute('onclick').includes("'" + id + "'")) {
+      l.classList.add('active');
+    }
+  });
+  document.getElementById('mobileMenu').classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  document.getElementById('quoteForm').style.display = 'none';
+  document.getElementById('successMsg').classList.add('show');
+  setTimeout(() => {
+    document.getElementById('quoteForm').style.display = 'flex';
+    document.getElementById('quoteForm').reset();
+    document.getElementById('successMsg').classList.remove('show');
+  }, 4000);
+}
+</script>
+</body>
+</html>
